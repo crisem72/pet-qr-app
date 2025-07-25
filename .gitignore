@@ -1,0 +1,16 @@
+# Node modules
+node_modules/
+
+# Entornos
+.env
+
+# Archivos de logs y sistema
+*.log
+.DS_Store
+
+# Builds de React
+frontend/build/
+
+# QR e imágenes generadas
+backend/uploads/
+backend/qr/
