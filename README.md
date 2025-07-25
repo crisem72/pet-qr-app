@@ -63,4 +63,4 @@ Este proyecto permite a los usuarios registrar sus datos y los de su mascota. Un
 
 ## 💬 Autor
 
-Hecho por [Tu Nombre Aquí]  
+Hecho por Cristhian Miño  
