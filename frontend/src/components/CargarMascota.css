@@ -1,0 +1,59 @@
+.cargar-box {
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  max-width: 500px;
+  width: 100%;
+}
+
+.cargar-box h2 {
+  text-align: center;
+  color: #f57c00;
+  margin-bottom: 1.5rem;
+}
+
+.cargar-box input,
+.cargar-box textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+.cargar-box textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.cargar-box button {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #f57c00;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.cargar-box button:hover {
+  background-color: #d75f00;
+}
+
+.cargar-box p {
+  text-align: center;
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+.qr-preview {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.qr-preview img {
+  max-width: 200px;
+  margin-top: 1rem;
+}

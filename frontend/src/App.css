@@ -13,6 +13,21 @@
   }
 }
 
+:root {
+  --fondo-principal: url('./assets/fondo.png');
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-image: var(--fondo-principal);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: 'Arial', sans-serif;
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;

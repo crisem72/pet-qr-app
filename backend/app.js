@@ -18,6 +18,10 @@ app.use('/api/auth', authRoutes);
 const mascotaRoutes = require('./routes/mascotaRoutes');
 app.use('/api/mascotas', mascotaRoutes);
 
+const path = require('path');
+app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
+
+
 // Conexión con la base de datos y levantar servidor
 sequelize.sync().then(() => {
   console.log('Base de datos sincronizada');

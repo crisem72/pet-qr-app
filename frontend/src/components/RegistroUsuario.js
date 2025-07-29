@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import api from '../api';
+import './RegistroUsuario.css';
 
 function RegistroUsuario() {
   const [form, setForm] = useState({
@@ -17,27 +18,34 @@ function RegistroUsuario() {
       await api.post('/auth/register', form);
       setMensaje('Usuario registrado exitosamente');
     } catch (error) {
-      setMensaje(error.response.data.mensaje || 'Error al registrar');
+      setMensaje(error.response?.data?.mensaje || 'Error al registrar');
     }
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <h2>Registro de Usuario</h2>
-      {['nombre', 'email', 'contraseña', 'whatsapp', 'instagram'].map(campo => (
-        <input
-          key={campo}
-          type={campo === 'contraseña' ? 'password' : 'text'}
-          name={campo}
-          placeholder={campo}
-          value={form[campo]}
-          onChange={handleChange}
-        />
-      ))}
-      <button type="submit">Registrarse</button>
-      <p>{mensaje}</p>
-    </form>
+    <div className="registro-container">
+      <div className="registro-box">
+        <h2>Registro de Usuario</h2>
+        <form onSubmit={handleSubmit}>
+          {['nombre', 'email', 'contraseña', 'whatsapp', 'instagram'].map((campo, i) => (
+            <input
+              key={i}
+              type={campo === 'contraseña' ? 'password' : 'text'}
+              name={campo}
+              placeholder={campo.charAt(0).toUpperCase() + campo.slice(1)}
+              value={form[campo]}
+              onChange={handleChange}
+              required
+            />
+          ))}
+          <button type="submit">Registrarse</button>
+        </form>
+        <p className="mensaje">{mensaje}</p>
+      </div>
+    </div>
   );
 }
 
 export default RegistroUsuario;
+
+

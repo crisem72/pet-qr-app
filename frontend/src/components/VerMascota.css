@@ -1,0 +1,33 @@
+.ver-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+  background-color: #fc941e;
+  padding: 2rem;
+}
+
+.ver-box {
+  background-color: rgb(231, 24, 24);
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  text-align: center;
+  max-width: 500px;
+  width: 100%;
+}
+
+.ver-box h2 {
+  color: #f57c00;
+  margin-bottom: 1rem;
+}
+
+.ver-imagen img,
+.ver-qr img {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+  margin: 1rem 0;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
