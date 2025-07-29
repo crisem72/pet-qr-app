@@ -41,22 +41,24 @@ Este sistema permite que cualquier persona registre su mascota y genere un **có
 
 ## 🗂️ Estructura de Carpetas
 
+```
 pet-qr-app/
 ├── backend/
-│ ├── controllers/
-│ ├── middleware/
-│ ├── models/
-│ ├── routes/
-│ └── index.js
+│   ├── controllers/
+│   ├── middleware/
+│   ├── models/
+│   ├── routes/
+│   └── index.js
 ├── frontend/
-│ ├── src/
-│ │ ├── components/
-│ │ ├── views/
-│ │ └── App.js
-├── uploads/ # Imágenes de mascotas
-├── qr/ # QR generados
+│   ├── src/
+│   │   ├── components/
+│   │   ├── views/
+│   │   └── App.js
+├── uploads/       # Imágenes de mascotas
+├── qr/            # QR generados
 ├── .env
 └── README.md
+```
 
 ---
 
@@ -64,46 +66,61 @@ pet-qr-app/
 
 ### 1. Cloná el repositorio
 
-
+```bash
 git clone https://github.com/usuario/pet-qr-app.git
 cd pet-qr-app
----
+```
 
-2. Configuración del Backend
+### 2. Configuración del Backend
+
+```bash
 cd backend
 npm install
-Configurá el archivo .env con tus datos de PostgreSQL:
+```
 
+Configurá el archivo `.env` con tus datos de PostgreSQL:
+
+```env
 PORT=3001
 DB_USER=postgres
 DB_PASSWORD=tu_password
 DB_NAME=petqr
 DB_HOST=localhost
 SECRET=clave_supersecreta
+```
 
 Creá la base de datos manualmente o con Sequelize:
+
+```bash
 npx sequelize db:migrate
+```
 
 Iniciá el servidor backend:
+
+```bash
 npm start
+```
 
-3. Configuración del Frontend
+### 3. Configuración del Frontend
 
+```bash
 cd ../frontend
 npm install
 npm run dev
-📸 Sugerencias de Capturas
-Página de inicio
+```
 
-Formulario de registro de mascotas
+---
 
-Vista del código QR generado
+## 📸 Sugerencias de Capturas
 
-Página pública de visualización desde el QR
+- Página de inicio
+- Formulario de registro de mascotas
+- Vista del código QR generado
+- Página pública de visualización desde el QR
 
-👨‍💻 Autor
-Desarrollado por [Tu Nombre] para el proyecto académico.
+---
+
+## 👨‍💻 Autor
+
+Desarrollado por [Tu Nombre] para el proyecto académico.  
 Licencia: MIT
-
-
-Hecho por Cristhian Miño  
