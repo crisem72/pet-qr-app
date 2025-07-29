@@ -7,39 +7,34 @@ Este sistema permite que cualquier persona registre su mascota y genere un **có
 ## 🌐 Tecnologías Utilizadas
 
 ### Backend
-- **Node.js** + **Express** → Framework y servidor HTTP
-- **PostgreSQL** → Base de datos relacional
-- **Sequelize** → ORM para manejar la base de datos desde código JS
-- **JWT** + **bcrypt** → Autenticación segura
-- **Multer** → Subida de imágenes
-- **QR Code (qrcode)** → Generación de códigos QR en base a la info de la mascota
+- **Node.js** + **Express**
+- **PostgreSQL**
+- **Sequelize**
+- **JWT** + **bcrypt**
+- **Multer**
+- **qrcode (npm)**
 
 ### Frontend
-- **React.js** → SPA para el cliente web
-- **Bootstrap** → Estilización y maquetado visual
-- **CSS personalizado** → Fondos temáticos, paleta naranja/blanca, diseño amigable
+- **React.js**
+- **Bootstrap**
+- **CSS personalizado**
 
 ---
 
 ## 🧩 Funcionalidades
 
-### 🔐 Autenticación
-- Registro e inicio de sesión con encriptación de contraseña (`bcrypt`)
-- Acceso con JWT a rutas protegidas del backend
+### Autenticación
+- Registro e inicio de sesión con contraseña encriptada
+- Acceso a rutas protegidas con token JWT
 
-### 🐶 Gestión de Mascotas
-- Formulario para **registrar mascotas** (nombre, edad, raza, detalles, imagen)
-- Se genera automáticamente un **código QR** al registrar
-- La imagen de la mascota y el QR quedan disponibles
-- Página pública accesible desde el QR escaneado
-
-### 🖼️ Carga y Visualización
-- Subida de imagen de la mascota desde el formulario
-- Se visualiza todo en una sección `/mascota`, con estilo amigable
+### Gestión de Mascotas
+- Registro de mascotas con datos e imagen
+- Generación automática de código QR
+- Visualización pública desde el QR escaneado
 
 ---
 
-## 🗂️ Estructura de Carpetas
+## 🗂️ Estructura del Proyecto
 
 ```
 pet-qr-app/
@@ -54,33 +49,26 @@ pet-qr-app/
 │   │   ├── components/
 │   │   ├── views/
 │   │   └── App.js
-├── uploads/       # Imágenes de mascotas
-├── qr/            # QR generados
+├── uploads/
+├── qr/
 ├── .env
 └── README.md
 ```
 
 ---
 
-## ⚙️ Instalación y Ejecución
+## ⚙️ Instalación
 
-### 1. Cloná el repositorio
-
-```bash
-git clone https://github.com/usuario/pet-qr-app.git
-cd pet-qr-app
-```
-
-### 2. Configuración del Backend
+### Backend
 
 ```bash
 cd backend
 npm install
 ```
 
-Configurá el archivo `.env` con tus datos de PostgreSQL:
+Archivo `.env`:
 
-```env
+```
 PORT=3001
 DB_USER=postgres
 DB_PASSWORD=tu_password
@@ -89,38 +77,21 @@ DB_HOST=localhost
 SECRET=clave_supersecreta
 ```
 
-Creá la base de datos manualmente o con Sequelize:
-
 ```bash
 npx sequelize db:migrate
-```
-
-Iniciá el servidor backend:
-
-```bash
 npm start
 ```
 
-### 3. Configuración del Frontend
+### Frontend
 
 ```bash
-cd ../frontend
+cd frontend
 npm install
 npm run dev
 ```
 
 ---
 
-## 📸 Sugerencias de Capturas
-
-- Página de inicio
-- Formulario de registro de mascotas
-- Vista del código QR generado
-- Página pública de visualización desde el QR
-
----
-
 ## 👨‍💻 Autor
 
-Desarrollado por [Tu Nombre] para el proyecto académico.  
-Licencia: MIT
+Desarrollado por Cristhian Miño.
