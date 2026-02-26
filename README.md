@@ -1,97 +1,50 @@
-# 🐾 Pet QR - Identificador para Mascotas Perdidas
+# 🐾 Pet QR - Identificador de Mascotas Perdidas
 
-Este sistema permite que cualquier persona registre su mascota y genere un **código QR** que puede ser impreso y colocado en el collar del animal. Al escanear ese QR, se podrá acceder a los datos de la mascota y sus dueños, incluyendo nombre, raza, edad, datos de contacto, y más. Ideal para **recuperar mascotas perdidas** de manera rápida.
+Aplicación web FullStack que permite registrar mascotas y generar un código QR único para identificación rápida en caso de pérdida.
 
----
-
-## 🌐 Tecnologías Utilizadas
-
-### Backend
-- **Node.js** + **Express**
-- **PostgreSQL**
-- **Sequelize**
-- **JWT** + **bcrypt**
-- **Multer**
-- **qrcode (npm)**
-
-### Frontend
-- **React.js**
-- **Bootstrap**
-- **CSS personalizado**
-
----
+## 🚀 ¿Cómo funciona?
+1. El usuario registra su mascota.
+2. El sistema genera un QR único.
+3. El QR puede imprimirse y colocarse en el collar.
+4. Al escanearlo, cualquier persona accede a los datos de contacto del dueño.
 
 ## 🧩 Funcionalidades
+- Registro e inicio de sesión
+- Autenticación con JWT
+- Registro de mascotas con imagen
+- Generación automática de QR
+- Página pública accesible desde el QR
 
-### Autenticación
-- Registro e inicio de sesión con contraseña encriptada
-- Acceso a rutas protegidas con token JWT
+## 🛠 Tecnologías
 
-### Gestión de Mascotas
-- Registro de mascotas con datos e imagen
-- Generación automática de código QR
-- Visualización pública desde el QR escaneado
+**Frontend**
+- React
+- CSS personalizado
 
----
+**Backend**
+- Node.js
+- Express
+- PostgreSQL
+- Sequelize
+- JWT
+- bcrypt
+- Multer
+- QR Code Generator
 
-## 🗂️ Estructura del Proyecto
-
-```
-pet-qr-app/
-├── backend/
-│   ├── controllers/
-│   ├── middleware/
-│   ├── models/
-│   ├── routes/
-│   └── index.js
-├── frontend/
-│   ├── src/
-│   │   ├── components/
-│   │   ├── views/
-│   │   └── App.js
-├── uploads/
-├── qr/
-├── .env
-└── README.md
-```
-
----
 
 ## ⚙️ Instalación
-
-### Backend
-
 ```bash
+git clone https://github.com/crisem72/pet-qr-app.git
+
 cd backend
 npm install
-```
-
-Archivo `.env`:
-
-```
-PORT=3001
-DB_USER=postgres
-DB_PASSWORD=tu_password
-DB_NAME=petqr
-DB_HOST=localhost
-SECRET=clave_supersecreta
-```
-
-```bash
-npx sequelize db:migrate
 npm start
-```
 
-### Frontend
-
-```bash
 cd frontend
 npm install
 npm run dev
-```
 
----
+👨‍💻 Autor
 
-## 👨‍💻 Autor
-
-Desarrollado por Cristhian Miño.
+Cristhian Emanuel Miño
+Técnico Universitario en Programación – UTN
